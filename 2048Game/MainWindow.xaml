@@ -10,7 +10,7 @@
         Width="420"
         ResizeMode="NoResize"
         Background="#FEFEEE">
-    <Grid x:Name="MainGrid" Height="400" Width="400" ShowGridLines="False" Margin="0,3,3,3"
+    <Grid x:Name="MainGrid" Background="Bisque" Height="400" Width="400" ShowGridLines="False" Margin="0,3,3,3"
           HorizontalAlignment="Center" VerticalAlignment="Bottom">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -28,8 +28,8 @@
         <Label x:Name="gameOver_lbl" Content="Game Over" HorizontalAlignment="Left"
                Margin="60,50,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.RowSpan="2"
                Grid.ColumnSpan="4" Height="100" Width="280" HorizontalContentAlignment="Center"
-               VerticalContentAlignment="Center" FontSize="50" Background="Beige"
-               Panel.ZIndex="1" Foreground="Orange" Visibility="Hidden"/>
+               VerticalContentAlignment="Center" FontSize="50" Background="DimGray"
+               Panel.ZIndex="1" Foreground="Red" Visibility="Hidden"/>
 
         <Frame x:Name="fm1" Grid.ColumnSpan="4" HorizontalAlignment="Left"
                Height="{Binding ElementName=MainGrid, Path=Height, UpdateSourceTrigger=PropertyChanged}"
@@ -37,7 +37,7 @@
                Grid.RowSpan="4"
                VerticalAlignment="Top" 
                BorderThickness="4" 
-               BorderBrush="BurlyWood"
+               BorderBrush="DimGray"
                Panel.ZIndex="1"/>
 
         <Label x:Name="lbl_score"
@@ -45,7 +45,7 @@
                Content="0" 
                FontSize="15" 
                BorderThickness="1" 
-               BorderBrush="BurlyWood"
+               BorderBrush="DimGray"
                Height="30" 
                Margin="62,-42.6,1.2,0" 
                HorizontalAlignment="Center" 
@@ -59,11 +59,11 @@
         <Label Content="Record: " HorizontalAlignment="Left" FontSize="15"  
                VerticalContentAlignment="Center"
                Margin="6,-42,0,0" VerticalAlignment="Top" Width="80" Grid.Column="2" />
-        
+
         <Label x:Name="lbl_record" Grid.ColumnSpan="2" Content="0"
                FontSize="15"
                BorderThickness="1"
-               BorderBrush="BurlyWood"
+               BorderBrush="DimGray"
                Height="30"
                VerticalAlignment="Top"
                VerticalContentAlignment="Center"
@@ -72,20 +72,21 @@
                Margin="62,-42.6,1,0"/>
 
         <Slider x:Name="sld1" HorizontalAlignment="Left"
-                VerticalAlignment="Top" Grid.ColumnSpan="3" Width="130"
+                VerticalAlignment="Top" Grid.ColumnSpan="4" Width="309"
                 Height="25" Minimum="4" Maximum="8" TickFrequency="1" IsSnapToTickEnabled="True"
-                ValueChanged="sld1_ValueChanged" Focusable="False" Margin="90,-90,0,0"/>
+                ValueChanged="sld1_ValueChanged" Focusable="False" Margin="90,-95,0,0"/>
 
         <Label Content="Board size: " FontSize="15" VerticalContentAlignment="Center"
-               Margin="4,-95,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="81"/>
-        
+               Margin="4,-100,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="81" RenderTransformOrigin="0.465,0.565"/>
+
         <Label Content="To restart press ESC"
                Grid.Column="2"
                HorizontalAlignment="Left"
                VerticalAlignment="Top"
                Height="30"
-               Width="120"
+               Width="150"
                Grid.ColumnSpan="2"
-               Margin="74,-95,0,0"/>
+               FontSize="16"
+               Margin="-70,-80,0,0"/>
     </Grid>
 </Window>
